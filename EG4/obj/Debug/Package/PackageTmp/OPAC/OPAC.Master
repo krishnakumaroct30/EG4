@@ -1,0 +1,619 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="OPAC.master.vb" Inherits="EG4.OPAC" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+ 
+<head id="Head1" runat="server">
+    <title>e-Granthalaya: A Digital Agenda for Library Automation and Networking</title>
+    <meta http-equiv ="Page-Enter" content ="blendTrans(Duration=0)"/>
+    <meta http-equiv="Page-Exit"content="blendTrans(Duration=0)"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+    <meta http-equiv="PRAGMA" content="NO-CACHE" />
+    <meta http-equiv="Cache-Control" content="NO-CACHE" />
+    <meta http-equiv="Cache-Control" content="NO-STORE" />
+    <meta http-equiv="Cache-Control" content="MUST-REVALIDATE" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var GB_ROOT_DIR = "../greybox/";    
+    </script>
+
+    <script type="text/javascript" src="../greybox/AJS.js"></script>
+    <script type="text/javascript" src="../greybox/AJS_fx.js"></script>
+    <script type="text/javascript" src="../greybox/gb_scripts.js"></script>
+    <link href="../greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all" /> 
+    <script type="text/javascript" src="../static_files/help.js"></script>
+    <link href="../static_files/help.css" rel="stylesheet" type="text/css" media="all" />
+      
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+    <style type="text/css">
+        
+         .result9032965 {
+	        text-align: left;
+            border:0;
+            }
+         .style1
+        {
+            
+            text-align: center;
+            height: auto;
+            width: 94%;           
+            background-image: url('<%# ResolveUrl("~/Images/wood.jpg") %> ');           
+        }
+      
+        .style2
+        {
+            clear: both;
+            text-align: center;
+            height: 26px;
+            width: 100%;
+            
+        }
+        
+          
+        
+        .style8
+        {
+            color: Blue;
+        }
+        .style10
+        {
+            text-align: center;
+            font-size: x-small;
+            color: White;
+            width: 100%;
+        }
+        .style13
+        {
+            margin: 0px auto 0px auto;
+            border:0px;
+            padding: 0px;
+            width: 100%;
+            text-align: center;
+            height: 120px;
+        }
+        .style15
+        {
+           width: 97%;           
+           text-align:center;
+           font-size:inherit;
+           color: White;
+        }
+        .style16
+        {
+            width: 100%;
+            background-color: #fff;
+            margin:    0px auto  auto auto;
+            border: 1px solid #496077;
+            position: relative;
+            left: 0px;
+            top: 0px; 
+            height:auto          
+        }
+        .style17
+        {
+            width: 97%;
+            height: 100px;           
+            margin-top: -6px;
+            position:  relative;
+            background-repeat:no-repeat;
+            background-position:center;
+            vertical-align: top;
+            background-image: url('<%# ResolveUrl("~/Images/OPAC.jpg") %> ');              
+        }
+        
+          .style21
+        {
+            margin:     32px   auto   auto      18px;
+            width: 200px;  
+            border:none; 
+            height:auto;
+        }
+        .style24
+        {
+            width: 50px;
+            height: 13px;
+            text-align: center;
+        }
+        .style25
+        {           
+            height: 13px;
+            font-size: small;
+            color: #336699;
+            border-color: Blue;
+        }
+        .style26
+        {
+            width: 50px;
+            height: 25px;
+            font-size: small;
+            color: #336699;
+            text-align: center;
+            font-weight:bold;
+            border-bottom-width:2;
+            border-color: White;
+            }
+        .style27
+        {
+            text-align: center;
+            height: 0px;
+            width: 200px;
+        }
+        .style28
+        {
+            
+            text-align: left;
+        }
+        .style33
+        {
+            width: 100%;
+            height: 23px;
+            margin-left: 1px;
+            border:none;
+        }
+        .style35
+        {
+            font-size: x-small;
+        }
+        .style36
+        {
+            color: White;
+            vertical-align: top;
+        }
+        .style37
+        {
+            text-align: right;
+        }
+        .style39
+        {
+            width: 100%;
+            text-align: center;
+            height: auto;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        
+        .style40
+        {
+            color: #FF3300;
+            font-size: x-small;
+        }
+        
+        .style42
+        {
+            text-align: center;
+            font-size: x-small;
+            width: 100%;
+        }
+        
+         .style43
+        {
+            cursor:pointer;
+            font-weight: bold;
+            text-align:center;
+            vertical-align: middle;   
+            
+        }
+        
+        .style44
+        {
+            text-align: center;
+            height: 0px;
+            width: 200px;
+            font-size: x-small;
+        }
+        
+        
+        .styleBttnMain
+        {
+            cursor:pointer;
+            font-weight: bold;
+            text-align:center;
+            vertical-align: middle; 
+            width:185px;  
+            font-size: smaller;
+            height:17px;     
+             
+            
+        }
+        
+        a.button:hover{
+             background: #383;
+        }
+        
+        .accordion {  
+            width: 200px;  
+        }  
+          
+        .accordionHeader {  
+            border: 1px solid #2F4F4F;  
+            color: white;  
+            background-color: #2E4d7B;  
+            
+            font-family: Arial, Sans-Serif;  
+            font-size: 12px;  
+            font-weight: bold;  
+            padding: 5px;  
+            margin-top: 5px;  
+            cursor: pointer;  
+        }  
+          
+        .accordionHeaderSelected {  
+            border: 1px solid #2F4F4F;  
+            color: white;  
+            background-color: #5078B3;  
+            font-family: Arial, Sans-Serif;  
+            font-size: 12px;  
+            font-weight: bold;  
+            padding: 5px;  
+            margin-top: 5px;  
+            cursor: pointer;  
+        }  
+          
+        .accordionContent {  
+            background-color: #D3DEEF;  
+            border: 1px dashed #2F4F4F;  
+            border-top: none;  
+            padding: 5px;  
+            padding-top: 10px;  
+        }  
+        
+                
+        </style> 
+        <script type="text/javascript">
+            window.history.forward();
+            function noBack() {
+                window.history.forward();
+            } 
+        </script> 
+
+      
+        
+       
+</head>
+
+ <script language ="javascript" src ="../md5.js" type ="text/javascript" ></script> 
+    <script language="javascript" type="text/javascript">
+
+        var MyHashed;
+        var salt;
+        function test2() {
+            var usrnam = "";
+            var pwd = "";
+            var lbcode = "";
+            usrnam = document.getElementById("txtMemberNo").value;
+            pwd = document.getElementById("txtPassword").value;
+            lbcode = document.getElementById("txtLibCode").value;
+            // alert("User Name:"+usrnam);
+            //alert("Password:"+pwd);
+
+            if (lbcode == "") {
+                alert("Please enter proper \" Library Code\" field.");
+                document.getElementById("txtLibCode").focus();
+                return (false);
+            }
+            if (document.getElementById("txtLibCode").value.length < 5) {
+                alert("Length of \"Library Code\" should be Min 5 characters.");
+                document.getElementById("txtLibCode").focus();
+                return (false);
+            }
+            if (document.getElementById("txtLibCode").value.length > 10) {
+                alert("Length of \" Library Code\" should be Max 10 characters.");
+                document.getElementById("txtLibCode").focus();
+                return (false);
+            }
+
+
+
+            if (usrnam == "") {
+                alert("Please enter proper \" Member No\" field.");
+                document.getElementById("txtMemberNo").focus();
+                return (false);
+            }
+            if (document.getElementById("txtMemberNo").value.length < 1) {
+                alert("Length of \"Member No\" should be Min 1 characters.");
+                document.getElementById("txtMemberNo").focus();
+                return (false);
+            }
+            if (document.getElementById("txtMemberNo").value.length > 20) {
+                alert("Length of \"Member No\" should be Max 20 characters.");
+                document.getElementById("txtMemberNo").focus();
+                return (false);
+            }
+
+
+            
+
+
+
+
+            if (pwd == "") {
+                alert("Please enter proper \"Password\" field.");
+                document.getElementById("txtPassword").focus();
+                return (false);
+            }
+            if (document.getElementById("txtPassword").value.length < 5) {
+                alert("Length of \"Password\" should be Min 6 characters.");
+                document.getElementById("txtPassword").focus();
+                return (false);
+            }
+            if (document.getElementById("txtPassword").value.length > 10) {
+                alert("Length of \"Password\" should be Max 10 characters.");
+                document.getElementById("txtPassword").focus();
+                return (false);
+            }
+
+            else {
+                MyHashed = hex_md5(document.getElementById("txtPassword").value);
+                salt = '<% = mySalt %>'
+                //alert("Password with salt:" + salt);   
+                var str1;
+
+                str1 = salt + MyHashed
+                //alert("Password salt has:" + str1);
+                var hashplus = hex_md5(str1);
+                //alert("hashplus:" +hashplus);
+
+                document.getElementById("RKPass2").value = hashplus;
+                document.getElementById("txtPassword").value = "";
+                return (true);
+            }
+            return (false);
+        }
+
+</script>
+   
+
+<body  onload="noBack();" onpageshow="if (event.persisted) noBack();" 
+    onunload="" 
+    text="e-Granthalaya: A Digital Agenda for Library Automation and Networking" 
+    bgcolor="#ff9933" class="style1" style="height: auto;">
+   
+    <form id="form1" runat="server" class="style39">
+     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
+               
+     </asp:ScriptManager>
+
+    <div class="style16">
+        <div class="style13"> 
+                <table align="center" cellpadding="0" cellspacing="0" class="style33">
+                     <tr>                         
+                         <td class="style36" align="left" ><strong>
+                            <asp:Label ID="Label3" runat="server"  Text="" ForeColor="#0066FF" 
+                                 style="font-size: x-small; margin-left: 5px;"></asp:Label>
+                            </strong></td>
+                    <td class="style36" align="left" ><strong>
+                            <asp:Label ID="Label4" runat="server"  Text="" ForeColor="#0066FF" style="font-size: x-small"></asp:Label>
+                            </strong></td>
+                         <td class="style36" align="right"><strong>
+                            <asp:Label ID="Label2" runat="server" ForeColor="#0066FF"  style="font-size: x-small; margin-right:20px;" ></asp:Label>
+                         </strong></td>
+                     </tr>
+                </table>
+                                          
+                 <table align="center" cellpadding="0" cellspacing="0"  class="style17"> 
+                   
+                   
+                                    
+                     <tr id="TrNICImage" runat="server" style="border:0">                        
+                        
+                         <td align="left" valign="middle"> 
+                            <asp:Image ID="Image4" runat="server" ImageAlign="Left" ImageUrl="~/Images/ashok.GIF" />
+                            &nbsp;<asp:Label ID="Lbl_LibName" runat="server" 
+                                 style="font-weight: 700; font-size: small; color: #0066FF"></asp:Label><br />
+                            &nbsp;<asp:Label ID="Lbl_Parent" runat="server" 
+                                 style="font-weight: 700; font-size: medium; color: #0066FF"></asp:Label><br />
+                            &nbsp;<asp:Label ID="Lbl_City" runat="server" 
+                                 style="font-weight: 700; font-size: small; color: #0066FF"></asp:Label>
+                         </td>
+                     </tr>
+                                    
+                   </table>          
+
+                 <table align="center" border="0" cellpadding="2"  cellspacing="2" class="style15">
+                    <tr>
+                        <td style='border: 0px none Blue; background-image:  url(&#039;<%= ResolveUrl("~/Images/back.gif") %>&#039;);  text-align: left; font-size: medium; font-weight: 700;' 
+                            valign="bottom">
+                            <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/flag-indian.gif" Height="16px" Width="42px" />
+                            <%If LIBRARY_NAME = "" Then%>
+                            <strong><%= CLUSTER_NAME%> </strong>
+                            <%Else%>
+                             <strong><%= CLUSTER_NAME%> </strong>
+                            <%End If%>
+                            </td>
+                       <td style="border: 0px none Blue; background-image:  url('<%= ResolveUrl("~/Images/back.gif") %> ');  text-align: right;" valign="bottom">| Ver.4.0 Rel. 1 (Enterprise Edition)</td>
+                    </tr>
+                </table>
+            </div>
+         
+        
+        <input id="RKPass2" type="hidden" name="RKPass2" runat ="server" />  
+       
+        <table  align="left" cellspacing="2"  class="style21">
+            <tr>
+                <td class="style26" bgcolor="#99CCFF" align="center" colspan="2"><strong>Statistics</strong></td>
+            </tr>
+
+            <tr>
+                <td class="style27" colspan="2"><strong>Total Catalog Records: <%Response.Write(CatCount)%> </strong></td>
+            </tr>
+            <tr>
+                <td class="style27" colspan="2"><strong>Total Holding Records: <%Response.Write(HoldCount)%> </strong></td>
+            </tr>
+            <tr>
+                <td class="style27" colspan="2"><strong>Member Libraries: <%  Response.Write(LibCount)%> </strong></td>
+            </tr>
+            <tr id="TrMemPhoto" runat="server">
+            <td style="background-color:transparent; font-family: Arial; color: #0066FF;" class="style24" colspan="2"> &nbsp;<asp:Image 
+                    ID="Image3" runat="server" Height="40px" Width="30px" /></td>
+            </tr>
+            
+           
+            <tr id ="trMemLogin" runat="server">
+                <td class="style25" bgcolor="#99CCFF" align="center" colspan="2" ><strong>Member Login</strong></td>
+            </tr>
+             <tr id ="TR_LIBCODE" runat ="server" valign="middle" class="style27">
+                <td class="style37"  bgcolor="#C4E1FF">Library Code: </td>
+                <td class="style28" bgcolor="#C4E1FF"> 
+                    <asp:TextBox ID="txtLibCode" runat="server" Font-Bold="True"  ForeColor="#3399FF" width="105px"
+                        MaxLength="20" AutoCompleteType="Disabled" AUTOCOMPLETE="off" style="text-transform: uppercase" ></asp:TextBox>
+                </td>
+            </tr>
+            <tr id ="trUser" runat ="server" valign="middle"  class="style27">
+                <td class="style37"  bgcolor="#dedeef">Member No: </td>
+                <td class="style28"  bgcolor="#dedeef"> 
+                    <asp:TextBox ID="txtMemberNo" runat="server" Font-Bold="True"  ForeColor="#3399FF" width="105px"
+                        MaxLength="20" AutoCompleteType="Disabled" AUTOCOMPLETE="off"></asp:TextBox>
+                </td>
+            </tr>
+            <tr id ="trPassword" runat ="server" valign="middle" class="style27">
+                <td class="style37"  bgcolor="#DDFFFF">Password: </td>
+                <td class="style28"  bgcolor="#DDFFFF"> 
+                    <asp:TextBox ID="txtPassword" runat="server" ForeColor="#3399FF" width="105px" 
+                        TextMode="Password" AutoCompleteType="Disabled" AUTOCOMPLETE="off"></asp:TextBox>
+                </td>
+            </tr>
+            
+            <tr id ="trButton" runat ="server">                
+                <td class="style37"  bgcolor="#CCCCCC"></td>
+                <td class="style28"  bgcolor="#CCCCCC"> 
+                    <asp:Button ID="bttn_LogIn" runat="server" Text="Log In" Width="105px" 
+                        BorderColor="#CC3300" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" 
+                        ForeColor="#CC3300" Font-Size="Smaller" Height="16px"  
+                        OnClientClick="return test2();" CssClass="style43" />
+                </td>
+            </tr>
+             <tr id="trLable" runat="server">                
+                <td id="Td1" class="style27"   runat="server" bgcolor="#FFFF99" colspan="2"><strong>
+                    <asp:Label ID="Label1" runat="server" CssClass="style40"></asp:Label>
+                    </strong></td>
+            </tr>
+           
+          
+
+
+
+
+           
+             <tr id="FGP" runat="server" >                
+                <td id="Tdx" class="style44"   runat="server" colspan="2"><strong><a href="ForgotPass.aspx">Forget Password</a></strong></td>
+            </tr>
+             <tr id="TR_EDITPROFILE" runat="server" >                
+                <td id="Td2" class="style44"   runat="server" colspan="2"><strong><a href="EditMemberProfile.aspx">Edit Profile</a></strong></td>
+            </tr>
+            <tr id="TR_CHANGEPASSWORD" runat="server" >                
+                <td id="Td3" class="style44"   runat="server" colspan="2"><strong><a href="ResetPass.aspx">Change Password</a></strong></td>
+            </tr>
+            <tr id="TrLogOut" runat="server">                
+                <td id="TdLogOut" class="style44"   runat="server" colspan="2"><strong><a href="OPACLogout.aspx">Logout</a></strong></td>
+            </tr>
+           
+             <tr>
+            <td id ="TR_CREATELOGING" runat="server" class="style24" align="center" colspan="2">
+                &nbsp;</td>
+            </tr> 
+
+             <tr id="TRModules" runat="server">
+                <td class="style26"  bgcolor="#99CCFF" align="center" colspan="2">Member Services</td>
+            </tr>
+                    
+             <tr>
+                <td class="style26" align="center" colspan="2">&nbsp;</td>
+            </tr>
+                    
+             <tr id="TRAccordion" runat="server">
+                <td style="background-color: #99CCFF; font-family: Arial; color: #FFFFFF;" 
+                     class="style24" colspan="2">
+
+                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
+                    <ContentTemplate>
+
+                    <asp:TreeView ID="TreeView1" runat="server" EnableClientScript="true" 
+                          Font-Bold="True" 
+                        Font-Names="Arial" Font-Size="X-Small" ImageSet="Msdn" Width="200px"   
+                        NodeWrap="True">
+                        <HoverNodeStyle BackColor="White" ForeColor="#FFFFCC" />
+                        <Nodes>
+                            <asp:TreeNode Text="General Information" Value="General Information" NavigateUrl="~/OPAC/Default.aspx"  Expanded="True">
+                                <asp:TreeNode Text="Home" NavigateUrl="~/OPAC/Default.aspx" Value="Home"></asp:TreeNode>
+                                <asp:TreeNode Text="About Us"  Value="About"></asp:TreeNode>
+                                <asp:TreeNode Text="Feedback" Value="Feedback" NavigateUrl="~/OPAC/Feedback.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="View Feedback" Value="Contact"></asp:TreeNode>
+                                <asp:TreeNode Text="Contact" Value="Contact"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode  Text="Browse Collection"  Value="Browse Collection"  Expanded="False">
+                                <asp:TreeNode Text="Books and Monographs" Value="Books"></asp:TreeNode>
+                                <asp:TreeNode Text="Serials" Value="Serials"></asp:TreeNode>
+                                <asp:TreeNode Text="Non-Books Materials" Value="Non-Books"></asp:TreeNode>
+                                <asp:TreeNode Text="Knowledge Tree" Value="Knowledge Tree"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode  Text="Search Catalog"  Value="Search Catalog"  Expanded="False">
+                                <asp:TreeNode Text="Basic Search" Value="Basic"></asp:TreeNode>
+                                <asp:TreeNode Text="Advance Search" Value="Advance"></asp:TreeNode>
+                                <asp:TreeNode Text="e-Books" Value="e-Books"></asp:TreeNode>
+                                <asp:TreeNode Text="e-Articles" Value="e-Articles"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </Nodes>
+                        <NodeStyle Font-Underline="False" />
+                        <ParentNodeStyle Font-Bold="True" Font-Strikeout="False" Font-Underline="True" />
+                        <RootNodeStyle Font-Bold="True" />
+                        <SelectedNodeStyle Font-Bold="True" />
+                    </asp:TreeView>
+                    
+                     </ContentTemplate>
+                    </asp:UpdatePanel>
+                </td>               
+            </tr>
+            
+        </table>
+        
+        
+             
+        <div class="main" align="left">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+       
+
+
+       <div class="style2">
+            <br />   
+        </div>
+
+      </div>
+       
+        <div class="style2">
+            <br />   
+        </div>
+       
+        
+    <div  align="center" style="color: #FFFFFF; background-color: #FFFFFF;">
+        <a class="style42" href="DisclaimerOPAC.aspx">Disclaimer</a>
+        <span class="style10">| </span> <a class="style10" href="TermsOfUseOPAC.aspx">Terms of Use</a><span class="style10"> | </span> 
+        <a class="style10" href="CopyrightOPAC.aspx">Copyright<span 
+            class="style8"> </span>
+        </a>
+    </div>
+        <div style="background-color: #FFFFFF; color: #0066FF;"><span class="style35"><span class="style8">The site has been designed, developed and 
+            hosted by/in </span> <a href="http://home.nic.in" target="_blank" 
+                class="style8">National Informatics Centre</a><span class="style8">, Government of India. The site is best viewed in 1024 x 768 
+            screen resolution.</span></span><br />   
+        </div>
+
+
+
+
+          
+        
+    </form>
+  
+</body>
+
+</html>

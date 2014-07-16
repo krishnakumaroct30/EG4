@@ -1,0 +1,1456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{E3CDC4CE-80C7-4549-8AD8-CAAAAED18075}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EG4</RootNamespace>
+    <AssemblyName>EG4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EG4.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DeployIisAppPath>Default Web Site/EG4</DeployIisAppPath>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <ExcludeApp_Data>false</ExcludeApp_Data>
+    <WarningLevel>0</WarningLevel>
+    <DesktopBuildPackageLocation>..\..\EG4_Release</DesktopBuildPackageLocation>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EG4.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <WarningLevel>0</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <DesktopBuildPackageLocation>..\..\EG4_Release\</DesktopBuildPackageLocation>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\AJAX4.0\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60623\lib\40\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60623\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="WebControlCaptcha">
+      <HintPath>..\WebControlCaptcha.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="AjaxControlToolkit" />
+    <Import Include="CDO" />
+    <Import Include="CrystalDecisions" />
+    <Import Include="CrystalDecisions.CrystalReports.Engine" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ClusterProfile.aspx" />
+    <Content Include="Account\Cluster_GetLogo.aspx" />
+    <Content Include="Account\DbBackup.aspx" />
+    <Content Include="Acquisition\AddTitle.aspx" />
+    <Content Include="Acquisition\Cats_GetPhoto.aspx" />
+    <Content Include="Acquisition\Approvals.aspx" />
+    <Content Include="Acquisition\Accessioning.aspx" />
+    <Content Include="Acquisition\Cats_GetContents.aspx" />
+    <Content Include="Acquisition\Orders.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\EG4.dll" />
+    <Content Include="bin\EG4.pdb" />
+    <Content Include="bin\EG4.xml" />
+    <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\SanitizerProviders.dll" />
+    <Content Include="bin\WebControlCaptcha.dll" />
+    <Content Include="Budget\Bills.aspx" />
+    <Content Include="Budget\Budgets.aspx" />
+    <Content Include="Cataloging\GetDigitalFiles.aspx" />
+    <Content Include="Cataloging\Digitals.aspx" />
+    <Content Include="Cataloging\BarCode.aspx" />
+    <Content Include="Cataloging\Display_Thumb_Image.aspx" />
+    <Content Include="Cataloging\SV.aspx" />
+    <Content Include="Cataloging\CopyStatus.aspx" />
+    <Content Include="Cataloging\Retroconversion.aspx" />
+    <Content Include="Circulation\Transactions.aspx" />
+    <Content Include="Circulation\IssueReturn.aspx" />
+    <Content Include="Circulation\Members.aspx" />
+    <Content Include="Circulation\Member_GetPhoto.aspx" />
+    <Content Include="DFILES\DEITY\221\00000006-2.jpg" />
+    <Content Include="DFILES\DEITY\221\00000034.htm" />
+    <Content Include="DFILES\DEITY\224\HTML\00000006.htm" />
+    <Content Include="DFILES\DEITY\224\HTML\00000257.htm" />
+    <Content Include="Images\Actiion.gif" />
+    <Content Include="Images\AddBills_Over.png" />
+    <Content Include="Images\AddBills_Up.png" />
+    <Content Include="Images\AttachBills_Over.png" />
+    <Content Include="Images\AttachBills_Up.png" />
+    <Content Include="Images\BlueCap.png" />
+    <Content Include="Images\brover.png" />
+    <Content Include="Images\brup.png" />
+    <Content Include="Images\btn_edit.gif" />
+    <Content Include="Images\bullentin_board2.png" />
+    <Content Include="Images\button1over.png" />
+    <Content Include="Images\button1up.png" />
+    <Content Include="Images\button2over.png" />
+    <Content Include="Images\button2up.png" />
+    <Content Include="Images\button3over.png" />
+    <Content Include="Images\button3up.png" />
+    <Content Include="Images\CategoriesOver.png" />
+    <Content Include="Images\CategoriesUP.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\cooltext679767424.png" />
+    <Content Include="Images\cooltext679768551.png" />
+    <Content Include="Images\cooltext679769209.png" />
+    <Content Include="Images\eGHeader.jpg" />
+    <Content Include="Images\eGHeader1.jpg" />
+    <Content Include="Images\eGHeader2.jpg" />
+    <Content Include="Images\eGHeader3.jpg" />
+    <Content Include="Images\eGHeader4.jpg" />
+    <Content Include="Images\fvover.png" />
+    <Content Include="Images\fvup.png" />
+    <Content Include="Images\ie.bmp" />
+    <Content Include="Images\Issue_ReserveUP.png" />
+    <Content Include="Images\Issue_Reserve_over.png" />
+    <Content Include="Images\library.jpg" />
+    <Content Include="Images\Library2.JPG" />
+    <Content Include="Images\Link.png" />
+    <Content Include="Images\mvover.png" />
+    <Content Include="Images\mvup.png" />
+    <Content Include="Images\OPAC.jpg" />
+    <Content Include="Images\opac.png" />
+    <Content Include="Images\OPAC2.png" />
+    <Content Include="Images\OPAC3.png" />
+    <Content Include="Images\opac4.jpg" />
+    <Content Include="Images\OrderGenerateOver_bttn.png" />
+    <Content Include="Images\OrderGenerateUp_bttn.png" />
+    <Content Include="Images\OrderOver_bttn.png" />
+    <Content Include="Images\OrderUp_bttn.png" />
+    <Content Include="Images\PayBills_Over.png" />
+    <Content Include="Images\PayBills_Up.png" />
+    <Content Include="Images\pdf.ico" />
+    <Content Include="Images\pdf.png" />
+    <Content Include="Images\photo.swf" />
+    <Content Include="Images\PostBills_Over.png" />
+    <Content Include="Images\PostBills_Up.png" />
+    <Content Include="Images\ReceiveOver.png" />
+    <Content Include="Images\ReceiveUp.png" />
+    <Content Include="Images\RegistrationOver.png" />
+    <Content Include="Images\RegistrationUp.png" />
+    <Content Include="Images\return_renew_over.png" />
+    <Content Include="Images\return_renew_up.png" />
+    <Content Include="Images\Sub-CategoriesOver.png" />
+    <Content Include="Images\Sub-CategoriesUp.png" />
+    <Content Include="Images\Text.ico" />
+    <Content Include="Images\tick.png" />
+    <Content Include="Images\WebOPAC.gif" />
+    <Content Include="Images\WebOPAC2.jpg" />
+    <Content Include="Images\wood.jpg" />
+    <Content Include="Images\word.png" />
+    <Content Include="Images\yes.jpg" />
+    <Content Include="Images\zoom.jpg" />
+    <Content Include="Library\Receipts.aspx" />
+    <Content Include="Library\PhotoGallery.aspx" />
+    <Content Include="Master\Commiittee_Members.aspx" />
+    <Content Include="Library\DEFormats.aspx" />
+    <Content Include="Library\Notices.aspx" />
+    <Content Include="Library\LibraryTeam.aspx" />
+    <Content Include="Library\SystemData.aspx" />
+    <Content Include="Account\LibraryUserAccounts.aspx" />
+    <Content Include="Account\Lib_GetLogo.aspx" />
+    <Content Include="Account\Lib_GetPhoto.aspx" />
+    <Content Include="Account\UpdateLibraryProfile.aspx" />
+    <Content Include="Account\DatabaseLogs.aspx" />
+    <Content Include="Account\EditUserProfile.aspx" />
+    <Content Include="Account\SuperUserAccounts.aspx" />
+    <Content Include="Account\LibAccounts.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ForgotPassword.aspx" />
+    <Content Include="Account\Admin_CreateAccount.aspx" />
+    <Content Include="Account\User_GetPhoto.aspx" />
+    <Content Include="Library\Staff_GetPhoto.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Copyright.aspx" />
+    <Content Include="Disclaimer.aspx" />
+    <Content Include="error.htm" />
+    <Content Include="greybox\AJS.js" />
+    <Content Include="greybox\AJS_fx.js" />
+    <Content Include="greybox\gb_scripts.js" />
+    <Content Include="greybox\gb_styles.css" />
+    <Content Include="greybox\g_close.gif" />
+    <Content Include="greybox\header_bg.gif" />
+    <Content Include="greybox\indicator.gif" />
+    <Content Include="greybox\loader_frame.html" />
+    <Content Include="greybox\next.gif" />
+    <Content Include="greybox\prev.gif" />
+    <Content Include="greybox\w_close.gif" />
+    <Content Include="Images\ashok.GIF" />
+    <Content Include="Images\back.gif" />
+    <Content Include="Images\btn_delete.gif" />
+    <Content Include="Images\check_all.gif" />
+    <Content Include="Images\collapse.jpg" />
+    <Content Include="Images\eg4_10.jpg" />
+    <Content Include="Images\eg4_12.jpg" />
+    <Content Include="Images\email.bmp" />
+    <Content Include="Images\expand.jpg" />
+    <Content Include="Images\flag-indian.gif" />
+    <Content Include="Images\flashvortex.swf" />
+    <Content Include="Images\font_contrast_high.gif" />
+    <Content Include="Images\font_contrast_normal.gif" />
+    <Content Include="Images\font_decrease.gif" />
+    <Content Include="Images\font_increase.gif" />
+    <Content Include="Images\font_normal.gif" />
+    <Content Include="Images\footer.jpg" />
+    <Content Include="Images\GrayLine.gif" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\mainRight.png" />
+    <Content Include="Images\next.jpg" />
+    <Content Include="Images\nic1.gif" />
+    <Content Include="Images\ob019.jpg" />
+    <Content Include="Images\prev.jpg" />
+    <Content Include="Images\spiral2.gif" />
+    <Content Include="Images\spiral4.gif" />
+    <Content Include="Images\starBottom2.jpg" />
+    <Content Include="Images\stiky_note.jpg" />
+    <Content Include="Images\tabbg.gif" />
+    <Content Include="Images\tabbg1.gif" />
+    <Content Include="Images\uncheck_all.gif" />
+    <Content Include="Master\Committees.aspx" />
+    <Content Include="Library\Export.aspx" />
+    <Content Include="Master\Letters.aspx" />
+    <Content Include="Master\CommitteeMembers_GetPhoto.aspx" />
+    <Content Include="Master\Subjects.aspx" />
+    <Content Include="Master\Sections.aspx" />
+    <Content Include="Master\Vendors.aspx" />
+    <Content Include="Master\Publishers.aspx" />
+    <Content Include="Master\Holidays.aspx" />
+    <Content Include="md5.js" />
+    <Content Include="Micro\Articles.aspx" />
+    <Content Include="Micro\GetPhoto.aspx" />
+    <Content Include="Micro\News.aspx" />
+    <Content Include="obj\Debug\EG4.dll" />
+    <Content Include="obj\Debug\EG4.pdb" />
+    <Content Include="obj\Debug\EG4.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EG4.xml" />
+    <Content Include="obj\Debug\Interop.ADODB.dll" />
+    <Content Include="obj\Debug\Interop.CDO.dll" />
+    <Content Include="obj\Debug\Package\EG4.deploy-readme.txt" />
+    <Content Include="obj\Debug\Package\EG4.SetParameters.xml" />
+    <Content Include="obj\Debug\Package\EG4.SourceManifest.xml" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="OPAC\AboutOPAC.aspx" />
+    <Content Include="OPAC\CopyrightOPAC.aspx" />
+    <Content Include="OPAC\Default.aspx" />
+    <Content Include="OPAC\Details.aspx" />
+    <Content Include="OPAC\DisclaimerOPAC.aspx" />
+    <Content Include="OPAC\EditMemberProfile.aspx" />
+    <Content Include="OPAC\Feedback.aspx" />
+    <Content Include="OPAC\ForgotPass.aspx" />
+    <Content Include="OPAC\OPACLogout.aspx" />
+    <Content Include="OPAC\Mem_GetPhoto.aspx" />
+    <Content Include="OPAC\ChangePassword.aspx" />
+    <Content Include="OPAC\ResetPass.aspx" />
+    <Content Include="OPAC\TermsOfUseOPAC.aspx" />
+    <Content Include="Scripts\imageloader.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-form.js" />
+    <Content Include="Scripts\jquery-latest.pack.js" />
+    <Content Include="Scripts\jquery.tooltip.min.js" />
+    <Content Include="Search\BasicSearch.aspx" />
+    <Content Include="Serials\AddSerial.aspx" />
+    <Content Include="Serials\BoundJournals.aspx" />
+    <Content Include="Serials\Reminders.aspx" />
+    <Content Include="Serials\LooseIssues.aspx" />
+    <Content Include="Serials\Schedules.aspx" />
+    <Content Include="Serials\Subscriptions.aspx" />
+    <Content Include="Serials\JApprovals.aspx" />
+    <Content Include="Serials\JOrders.aspx" />
+    <Content Include="static_files\help.css" />
+    <Content Include="static_files\help.js" />
+    <Content Include="static_files\logo.gif" />
+    <Content Include="static_files\night_valley.jpg" />
+    <Content Include="static_files\night_valley_thumb.gif" />
+    <Content Include="static_files\night_valley_thumb.jpg" />
+    <Content Include="static_files\salt.jpg" />
+    <Content Include="static_files\salt_thumb.gif" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="Styles\WebResource.css" />
+    <Content Include="TermsOfUse.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\ClusterProfile.aspx.designer.vb">
+      <DependentUpon>ClusterProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ClusterProfile.aspx.vb">
+      <DependentUpon>ClusterProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Cluster_GetLogo.aspx.designer.vb">
+      <DependentUpon>Cluster_GetLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Cluster_GetLogo.aspx.vb">
+      <DependentUpon>Cluster_GetLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DbBackup.aspx.designer.vb">
+      <DependentUpon>DbBackup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DbBackup.aspx.vb">
+      <DependentUpon>DbBackup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Acquisition\AddTitle.aspx.designer.vb">
+      <DependentUpon>AddTitle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acquisition\AddTitle.aspx.vb">
+      <DependentUpon>AddTitle.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Acquisition\Cats_GetPhoto.aspx.designer.vb">
+      <DependentUpon>Cats_GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acquisition\Cats_GetPhoto.aspx.vb">
+      <DependentUpon>Cats_GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acquisition\Approvals.aspx.designer.vb">
+      <DependentUpon>Approvals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acquisition\Approvals.aspx.vb">
+      <DependentUpon>Approvals.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Acquisition\Accessioning.aspx.designer.vb">
+      <DependentUpon>Accessioning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acquisition\Accessioning.aspx.vb">
+      <DependentUpon>Accessioning.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Acquisition\Cats_GetContents.aspx.designer.vb">
+      <DependentUpon>Cats_GetContents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acquisition\Cats_GetContents.aspx.vb">
+      <DependentUpon>Cats_GetContents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acquisition\Orders.aspx.designer.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acquisition\Orders.aspx.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Budget\Bills.aspx.designer.vb">
+      <DependentUpon>Bills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Budget\Bills.aspx.vb">
+      <DependentUpon>Bills.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Budget\Budgets.aspx.designer.vb">
+      <DependentUpon>Budgets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Budget\Budgets.aspx.vb">
+      <DependentUpon>Budgets.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cataloging\GetDigitalFiles.aspx.designer.vb">
+      <DependentUpon>GetDigitalFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cataloging\GetDigitalFiles.aspx.vb">
+      <DependentUpon>GetDigitalFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cataloging\Digitals.aspx.designer.vb">
+      <DependentUpon>Digitals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cataloging\Digitals.aspx.vb">
+      <DependentUpon>Digitals.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cataloging\BarCode.aspx.designer.vb">
+      <DependentUpon>BarCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cataloging\BarCode.aspx.vb">
+      <DependentUpon>BarCode.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cataloging\Display_Thumb_Image.aspx.designer.vb">
+      <DependentUpon>Display_Thumb_Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cataloging\Display_Thumb_Image.aspx.vb">
+      <DependentUpon>Display_Thumb_Image.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cataloging\SV.aspx.designer.vb">
+      <DependentUpon>SV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cataloging\SV.aspx.vb">
+      <DependentUpon>SV.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cataloging\CopyStatus.aspx.designer.vb">
+      <DependentUpon>CopyStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cataloging\CopyStatus.aspx.vb">
+      <DependentUpon>CopyStatus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cataloging\Retroconversion.aspx.designer.vb">
+      <DependentUpon>Retroconversion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cataloging\Retroconversion.aspx.vb">
+      <DependentUpon>Retroconversion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Circulation\Transactions.aspx.designer.vb">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Circulation\Transactions.aspx.vb">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Circulation\IssueReturn.aspx.designer.vb">
+      <DependentUpon>IssueReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Circulation\IssueReturn.aspx.vb">
+      <DependentUpon>IssueReturn.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Circulation\Members.aspx.designer.vb">
+      <DependentUpon>Members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Circulation\Members.aspx.vb">
+      <DependentUpon>Members.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Circulation\Member_GetPhoto.aspx.designer.vb">
+      <DependentUpon>Member_GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Circulation\Member_GetPhoto.aspx.vb">
+      <DependentUpon>Member_GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code_Folder\HashClass1.vb" />
+    <Compile Include="FileExt.vb" />
+    <Compile Include="Library\Receipts.aspx.designer.vb">
+      <DependentUpon>Receipts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Receipts.aspx.vb">
+      <DependentUpon>Receipts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Library\PhotoGallery.aspx.designer.vb">
+      <DependentUpon>PhotoGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\PhotoGallery.aspx.vb">
+      <DependentUpon>PhotoGallery.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Commiittee_Members.aspx.designer.vb">
+      <DependentUpon>Commiittee_Members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Commiittee_Members.aspx.vb">
+      <DependentUpon>Commiittee_Members.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\CommitteeMembers_GetPhoto.aspx.designer.vb">
+      <DependentUpon>CommitteeMembers_GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CommitteeMembers_GetPhoto.aspx.vb">
+      <DependentUpon>CommitteeMembers_GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\Export.aspx.designer.vb">
+      <DependentUpon>Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Export.aspx.vb">
+      <DependentUpon>Export.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Micro\Articles.aspx.designer.vb">
+      <DependentUpon>Articles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Micro\Articles.aspx.vb">
+      <DependentUpon>Articles.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Micro\GetPhoto.aspx.designer.vb">
+      <DependentUpon>GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Micro\GetPhoto.aspx.vb">
+      <DependentUpon>GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Micro\News.aspx.designer.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Micro\News.aspx.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\AboutOPAC.aspx.designer.vb">
+      <DependentUpon>AboutOPAC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\AboutOPAC.aspx.vb">
+      <DependentUpon>AboutOPAC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\CopyrightOPAC.aspx.designer.vb">
+      <DependentUpon>CopyrightOPAC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\CopyrightOPAC.aspx.vb">
+      <DependentUpon>CopyrightOPAC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\Details.aspx.designer.vb">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\Details.aspx.vb">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\DisclaimerOPAC.aspx.designer.vb">
+      <DependentUpon>DisclaimerOPAC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\DisclaimerOPAC.aspx.vb">
+      <DependentUpon>DisclaimerOPAC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\EditMemberProfile.aspx.designer.vb">
+      <DependentUpon>EditMemberProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\EditMemberProfile.aspx.vb">
+      <DependentUpon>EditMemberProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\Feedback.aspx.designer.vb">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\Feedback.aspx.vb">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\ForgotPass.aspx.designer.vb">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\ForgotPass.aspx.vb">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\OPACLogout.aspx.designer.vb">
+      <DependentUpon>OPACLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\OPACLogout.aspx.vb">
+      <DependentUpon>OPACLogout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\OPAC.Master.designer.vb">
+      <DependentUpon>OPAC.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\OPAC.Master.vb">
+      <DependentUpon>OPAC.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\Mem_GetPhoto.aspx.designer.vb">
+      <DependentUpon>Mem_GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\Mem_GetPhoto.aspx.vb">
+      <DependentUpon>Mem_GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\ResetPass.aspx.designer.vb">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\ResetPass.aspx.vb">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPAC\TermsOfUseOPAC.aspx.designer.vb">
+      <DependentUpon>TermsOfUseOPAC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPAC\TermsOfUseOPAC.aspx.vb">
+      <DependentUpon>TermsOfUseOPAC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PopulateCombo.vb" />
+    <Compile Include="Library\DEFormats.aspx.designer.vb">
+      <DependentUpon>DEFormats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\DEFormats.aspx.vb">
+      <DependentUpon>DEFormats.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Library\Notices.aspx.designer.vb">
+      <DependentUpon>Notices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Notices.aspx.vb">
+      <DependentUpon>Notices.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Library\LibraryTeam.aspx.designer.vb">
+      <DependentUpon>LibraryTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\LibraryTeam.aspx.vb">
+      <DependentUpon>LibraryTeam.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Library\SystemData.aspx.designer.vb">
+      <DependentUpon>SystemData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\SystemData.aspx.vb">
+      <DependentUpon>SystemData.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\LibraryUserAccounts.aspx.designer.vb">
+      <DependentUpon>LibraryUserAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\LibraryUserAccounts.aspx.vb">
+      <DependentUpon>LibraryUserAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lib_GetLogo.aspx.designer.vb">
+      <DependentUpon>Lib_GetLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lib_GetLogo.aspx.vb">
+      <DependentUpon>Lib_GetLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lib_GetPhoto.aspx.designer.vb">
+      <DependentUpon>Lib_GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lib_GetPhoto.aspx.vb">
+      <DependentUpon>Lib_GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UpdateLibraryProfile.aspx.designer.vb">
+      <DependentUpon>UpdateLibraryProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UpdateLibraryProfile.aspx.vb">
+      <DependentUpon>UpdateLibraryProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\DatabaseLogs.aspx.designer.vb">
+      <DependentUpon>DatabaseLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DatabaseLogs.aspx.vb">
+      <DependentUpon>DatabaseLogs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\EditUserProfile.aspx.designer.vb">
+      <DependentUpon>EditUserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EditUserProfile.aspx.vb">
+      <DependentUpon>EditUserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\SuperUserAccounts.aspx.designer.vb">
+      <DependentUpon>SuperUserAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\SuperUserAccounts.aspx.vb">
+      <DependentUpon>SuperUserAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\LibAccounts.aspx.designer.vb">
+      <DependentUpon>LibAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\LibAccounts.aspx.vb">
+      <DependentUpon>LibAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.vb">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.vb">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.designer.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Admin_CreateAccount.aspx.designer.vb">
+      <DependentUpon>Admin_CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Admin_CreateAccount.aspx.vb">
+      <DependentUpon>Admin_CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\User_GetPhoto.aspx.designer.vb">
+      <DependentUpon>User_GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code_Folder\Alert.vb" />
+    <Compile Include="Code_Folder\CaptchaImage.vb" />
+    <Compile Include="Account\User_GetPhoto.aspx.vb">
+      <DependentUpon>User_GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\Staff_GetPhoto.aspx.designer.vb">
+      <DependentUpon>Staff_GetPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Staff_GetPhoto.aspx.vb">
+      <DependentUpon>Staff_GetPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Copyright.aspx.designer.vb">
+      <DependentUpon>Copyright.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Copyright.aspx.vb">
+      <DependentUpon>Copyright.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disclaimer.aspx.designer.vb">
+      <DependentUpon>Disclaimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disclaimer.aspx.vb">
+      <DependentUpon>Disclaimer.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Committees.aspx.designer.vb">
+      <DependentUpon>Committees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Committees.aspx.vb">
+      <DependentUpon>Committees.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Letters.aspx.designer.vb">
+      <DependentUpon>Letters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Letters.aspx.vb">
+      <DependentUpon>Letters.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Subjects.aspx.designer.vb">
+      <DependentUpon>Subjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Subjects.aspx.vb">
+      <DependentUpon>Subjects.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Sections.aspx.designer.vb">
+      <DependentUpon>Sections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Sections.aspx.vb">
+      <DependentUpon>Sections.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Vendors.aspx.designer.vb">
+      <DependentUpon>Vendors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vendors.aspx.vb">
+      <DependentUpon>Vendors.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Publishers.aspx.designer.vb">
+      <DependentUpon>Publishers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Publishers.aspx.vb">
+      <DependentUpon>Publishers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Holidays.aspx.designer.vb">
+      <DependentUpon>Holidays.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Holidays.aspx.vb">
+      <DependentUpon>Holidays.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\BibLevels_Summary_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibLevels_Summary_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Books_Approval_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Books_Approval_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Books_Order_Report.vb">
+      <DependentUpon>Books_Order_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CircullationTr_Summary_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CircullationTr_Summary_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AccompanyingMaterials_Summary_Report.vb">
+      <DependentUpon>AccompanyingMaterials_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\AcquisitionModes_Summary_Report.vb">
+      <DependentUpon>AcquisitionModes_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Bindings_Summary_Report.vb">
+      <DependentUpon>Bindings_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Payment_Detail_Report.vb">
+      <DependentUpon>Payment_Detail_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Frequencies_Summary_Report.vb">
+      <DependentUpon>Frequencies_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Languages_Summary_Report.vb">
+      <DependentUpon>Languages_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Formats_Summary_Report.vb">
+      <DependentUpon>Formats_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Currencies_Summary_Report.vb">
+      <DependentUpon>Currencies_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Countries_Summary_Report.vb">
+      <DependentUpon>Countries_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CopyStatus_Summary_Report.vb">
+      <DependentUpon>CopyStatus_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Documents_Summary_Report.vb">
+      <DependentUpon>Documents_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Materials_Summary_Report.vb">
+      <DependentUpon>Materials_Summary_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Journals_Order_Report.vb">
+      <DependentUpon>Journals_Order_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Journals_Approval_Report.vb">
+      <DependentUpon>Journals_Approval_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Most_Issued_Books_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Most_Issued_Books_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Overdue_allMembers.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Overdue_allMembers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Payment_Summary_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payment_Summary_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SV_Details_Report.vb">
+      <DependentUpon>SV_Details_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\SV_Compact_Report.vb">
+      <DependentUpon>SV_Compact_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\SV_Summary_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SV_Summary_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Title_Details_StatusWise_Serials_Report.vb">
+      <DependentUpon>Title_Details_StatusWise_Serials_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Title_Details_StatusWise_Books_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Title_Details_StatusWise_Books_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Title_Summary_StatusWise_Serials_Report.vb">
+      <DependentUpon>Title_Summary_StatusWise_Serials_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Title_Summary_StatusWise_Books_Report.vb">
+      <DependentUpon>Title_Summary_StatusWise_Books_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Holdings_Books_Full_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Holdings_Books_Full_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Holdings_Serials_Compact_Report.vb">
+      <DependentUpon>Holdings_Serials_Compact_Report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Holdings_Books_Compact_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Holdings_Books_Compact_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Holdings_Summary_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Holdings_Summary_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Title_Compact_StatusWise_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Title_Compact_StatusWise_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Top_Borrowers_Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Top_Borrowers_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Search\BasicSearch.aspx.designer.vb">
+      <DependentUpon>BasicSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\BasicSearch.aspx.vb">
+      <DependentUpon>BasicSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\AddSerial.aspx.designer.vb">
+      <DependentUpon>AddSerial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\AddSerial.aspx.vb">
+      <DependentUpon>AddSerial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\BoundJournals.aspx.designer.vb">
+      <DependentUpon>BoundJournals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\BoundJournals.aspx.vb">
+      <DependentUpon>BoundJournals.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\Reminders.aspx.designer.vb">
+      <DependentUpon>Reminders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\Reminders.aspx.vb">
+      <DependentUpon>Reminders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\LooseIssues.aspx.designer.vb">
+      <DependentUpon>LooseIssues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\LooseIssues.aspx.vb">
+      <DependentUpon>LooseIssues.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\Schedules.aspx.designer.vb">
+      <DependentUpon>Schedules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\Schedules.aspx.vb">
+      <DependentUpon>Schedules.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\Subscriptions.aspx.designer.vb">
+      <DependentUpon>Subscriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\Subscriptions.aspx.vb">
+      <DependentUpon>Subscriptions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\JApprovals.aspx.designer.vb">
+      <DependentUpon>JApprovals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\JApprovals.aspx.vb">
+      <DependentUpon>JApprovals.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Serials\JOrders.aspx.designer.vb">
+      <DependentUpon>JOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Serials\JOrders.aspx.vb">
+      <DependentUpon>JOrders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsOfUse.aspx.designer.vb">
+      <DependentUpon>TermsOfUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TermsOfUse.aspx.vb">
+      <DependentUpon>TermsOfUse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\EG4.Resources.resources" />
+    <EmbeddedResource Include="Reports\BibLevels_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BibLevels_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Books_Approval_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Books_Approval_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Books_Order_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Books_Order_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CircullationTr_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CircullationTr_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AccompanyingMaterials_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccompanyingMaterials_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AcquisitionModes_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AcquisitionModes_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Bindings_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bindings_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Payment_Detail_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Payment_Detail_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Frequencies_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Frequencies_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Languages_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Languages_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Formats_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Formats_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Currencies_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Currencies_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Countries_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Countries_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CopyStatus_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CopyStatus_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Documents_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Documents_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Materials_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Materials_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Journals_Order_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Journals_Order_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Journals_Approval_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Journals_Approval_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Most_Issued_Books_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Most_Issued_Books_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Overdue_allMembers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Overdue_allMembers.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Payment_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Payment_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SV_Details_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SV_Details_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SV_Compact_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SV_Compact_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SV_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SV_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Title_Details_StatusWise_Serials_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Title_Details_StatusWise_Serials_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Title_Details_StatusWise_Books_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Title_Details_StatusWise_Books_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Title_Summary_StatusWise_Serials_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Title_Summary_StatusWise_Serials_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Title_Summary_StatusWise_Books_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Title_Summary_StatusWise_Books_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Holdings_Books_Full_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Holdings_Books_Full_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Holdings_Serials_Compact_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Holdings_Serials_Compact_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Holdings_Books_Compact_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Holdings_Books_Compact_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Holdings_Summary_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Holdings_Summary_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Title_Compact_StatusWise_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Title_Compact_StatusWise_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Top_Borrowers_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Top_Borrowers_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="packages.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\EG4.vbproj.ResolveComReference.cache" />
+    <None Include="obj\Debug\GenerateResource.read.1.tlog" />
+    <None Include="obj\Debug\GenerateResource.write.1.tlog" />
+    <None Include="obj\Debug\Package\EG4.deploy.cmd" />
+    <Content Include="obj\Debug\Package\EG4.zip" />
+    <Content Include="OPAC\OPAC.Master" />
+    <None Include="static_files\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\" />
+    <Folder Include="bin\ar\" />
+    <Folder Include="bin\cs\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\es\" />
+    <Folder Include="bin\fr\" />
+    <Folder Include="bin\he\" />
+    <Folder Include="bin\hi\" />
+    <Folder Include="bin\it\" />
+    <Folder Include="bin\ja\" />
+    <Folder Include="bin\ko\" />
+    <Folder Include="bin\nl\" />
+    <Folder Include="bin\pt\" />
+    <Folder Include="bin\ru\" />
+    <Folder Include="bin\tr-TR\" />
+    <Folder Include="bin\zh-CHS\" />
+    <Folder Include="bin\zh-CHT\" />
+    <Folder Include="DFILES\NICLIBHQ\" />
+    <Folder Include="greybox\App_Data\" />
+    <Folder Include="PHOTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CDO">
+      <Guid>{CD000000-8B95-11D1-82DB-00C04FB1625D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50371</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/EG4</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
